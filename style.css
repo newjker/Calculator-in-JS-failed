@@ -1,6 +1,6 @@
 *, *::before, *::after {
     box-sizing: border-box;
-    font-family: Gotham Rounded, sans-serif;
+    font-family: Arial, sans-serif;
     font-weight: normal;
 }
 body {
@@ -11,6 +11,7 @@ body {
 .calculator-grid {
     display: grid;
     justify-content: center;
+    align-content: center;
     min-height: 100vh;
     grid-template-columns: repeat(4, 100px);
     grid-template-rows: minmax(120px, auto) repeat(5, 100px);
@@ -25,8 +26,11 @@ body {
 .calculator-grid > button:hover {
     background-color: #a9a9a9;
 }
+.span-two {
+    grid-column: span 2;
+}
 .output {
-    grid-column: 1 -1;
+    grid-column: 1 / -1;
     background-color: rgba(0, 0, 0, 0.75);
     display: flex;
     align-items: flex-end;
